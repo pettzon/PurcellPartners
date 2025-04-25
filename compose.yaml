@@ -1,0 +1,6 @@
+﻿services:
+  purcellpartners_1:
+    image: purcellpartners_1
+    build:
+      context: .
+      dockerfile: Dockerfile
