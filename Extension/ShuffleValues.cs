@@ -13,9 +13,7 @@ public static class ShuffleValues
         Random random = new Random();
         List<T> shuffled = new List<T>();
         
-        int iterations = values.Count;
-        
-        for (int i = 0; i < iterations; i++)
+        while (values.Count > 0)
         {
             int index = random.Next(0, values.Count);
             T value = values[index];
@@ -23,7 +21,7 @@ public static class ShuffleValues
             values.RemoveAt(index);
             shuffled.Add(value);
         }
-
+        
         return shuffled;
     }
 }
